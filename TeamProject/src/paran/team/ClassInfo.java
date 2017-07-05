@@ -118,10 +118,10 @@ class ForeStudent extends Student{//국외학생
  	
  	public void initStudent(String dir){
  		
- 		String Buffername = "";
-		String BufferstuId = "";
-		String BufferForignNum = "";
-		String BufferScore = "";
+ 		String Buffername = null;
+		String BufferstuId = null;
+		String BufferForignNum = null;
+		String BufferScore = null;
  		
  		
  		
