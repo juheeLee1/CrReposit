@@ -138,7 +138,7 @@ class ForeStudent extends Student{//국외학생
  
          	// 하나의 line을 split 하여 넣을 배열 splitedStr 
          	String[] splitedStr = null; 
-         	int score=0; 
+         	
  
  
          	// 한 줄씩 읽어서 line에 넣은 후 null이 아니면 실행 
@@ -155,18 +155,25 @@ class ForeStudent extends Student{//국외학생
  
              	// 배열에 들어간 길이 만큼 반복한다 
              	for (int i = 0; i < splitedStr.length; i++) { 
-             		if(i==3){ 
-             			score = Integer.valueOf(splitedStr[3]);//점수는 int로 
-             		}else{ 
+             		
              			// 양쪽의 공백을 제거하고 다시 입력한다 
              			splitedStr[i] = splitedStr[i].trim(); 
-             		} 
+             		
                      // splitedStr 을 List<Class명>에 입력하는 등 이용가능하다 
              	} 
+             	
+             	Buffername=splitedStr[0];
+        		
+             	BufferstuId=splitedStr[1];
+        	
+             	BufferForignNum=splitedStr[2];
+        		
+             	BufferScore=splitedStr[3];
+             	
              	if(splitedStr[2].substring(0,1).equals("1")){ 
-             		stuList.add(new DomeStudent(splitedStr[0],splitedStr[1],splitedStr[2],score)); 
+             		stuList.add(new DomeStudent(Buffername,BufferstuId,BufferForignNum,Integer.parseInt(BufferScore))); 
              	}else 
-             		stuList.add(new ForeStudent(splitedStr[0],splitedStr[1],splitedStr[2],score)); 
+             		stuList.add(new ForeStudent(Buffername,BufferstuId,BufferForignNum,Integer.parseInt(BufferScore))); 
          	} 			                             //name,          stuId,    ForignNum,   Score
          	reader.close(); 
  
