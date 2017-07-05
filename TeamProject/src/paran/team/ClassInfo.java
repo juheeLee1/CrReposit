@@ -116,7 +116,15 @@ class ForeStudent extends Student{//국외학생
  		setRanking(); 
  	} 
  	
- 	public void initStudent(String dir){ 
+ 	public void initStudent(String dir){
+ 		
+ 		String Buffername = "";
+		String BufferstuId = "";
+		String BufferForignNum = "";
+		String BufferScore = "";
+ 		
+ 		
+ 		
  		// 파일 변수 file을 만든다 
  		File file = new File(dir); 
      	try { 
